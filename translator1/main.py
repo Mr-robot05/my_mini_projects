@@ -39,4 +39,3 @@ button.pack(pady=20)
 
 root.mainloop()
 
-# Мой первый проект на гитхаб

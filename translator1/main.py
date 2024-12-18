@@ -7,9 +7,13 @@ def on_button_click():
     from_lang = from_lang_combobox.get()
     to_lang = to_lang_combobox.get()
     user_input = entry.get()
-    result = Translator(from_lang=from_lang, to_lang=to_lang).translate(user_input)
-    label.config(text=result)
 
+    try:
+        translator = Translator(from_lang=from_lang, to_lang=to_lang)
+        result = translator.translate(user_input)
+        label.config(text=result)
+    except Exception as e:
+        label.config(text="Ошибка перевода: " + str(e))
 
 root = tk.Tk()
 root.title("Пример Tkinter")

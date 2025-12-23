@@ -63,7 +63,7 @@ def gameplay(max_range: int):
     guess_label.pack(pady=10)
 
     # Создаем поле для ввода числа
-    guess_entry = Entry(root)
+    guess_entry = Entry(root, width=30, font=("Arial", 20))
     guess_entry.pack(pady=30)
 
     # Создаем метку для вывода результата
